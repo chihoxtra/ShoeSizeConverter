@@ -18,7 +18,8 @@ class ViewController: UIViewController {
     @IBOutlet weak var labelConvertedValue: UILabel!
     @IBOutlet weak var labelErrorMessage: UILabel!
     
-    
+    // Declaration of contstand and variables
+    let sizeConversionFactor:Double = 30
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -31,6 +32,15 @@ class ViewController: UIViewController {
     }
 
     @IBAction func buttonConvert(sender: UIButton) {
+        let shoeSizeinUSString = textFieldUSSize.text
+        
+        var shoeSizeinUK:Double = Double((shoeSizeinUSString as NSString).doubleValue) + sizeConversionFactor
+        
+        
+        labelConvertedValue.text = "\(shoeSizeinUK)"
+        
+        labelConvertedValue.hidden = false
+        
     }
 
 }
