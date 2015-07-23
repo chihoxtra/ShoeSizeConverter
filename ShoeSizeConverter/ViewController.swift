@@ -33,13 +33,26 @@ class ViewController: UIViewController {
 
     @IBAction func buttonConvert(sender: UIButton) {
         let shoeSizeinUSString = textFieldUSSize.text
+        let shoeSizeinUSDouble = Double((shoeSizeinUSString as NSString).doubleValue)
         
-        var shoeSizeinUK:Double = Double((shoeSizeinUSString as NSString).doubleValue) + sizeConversionFactor
+        labelConvertedValue.text = ""
         
+        if (shoeSizeinUSDouble == 0) && (shoeSizeinUSString != "0") {
+            
+            labelErrorMessage.text = "Please enter numbers only"
+            labelErrorMessage.hidden = false
+
+            
+
+        } else {
+            var shoeSizeinUK:Double = shoeSizeinUSDouble + sizeConversionFactor
+            labelConvertedValue.text = "\(shoeSizeinUK)"
+            labelConvertedValue.hidden = false
+            
+        }
+
+        textFieldUSSize.resignFirstResponder()
         
-        labelConvertedValue.text = "\(shoeSizeinUK)"
-        
-        labelConvertedValue.hidden = false
         
     }
 
