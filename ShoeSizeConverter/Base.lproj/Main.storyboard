@@ -34,22 +34,64 @@
                                 <variation key="widthClass=compact" fixedFrame="YES">
                                     <rect key="frame" x="217" y="28" width="74" height="39"/>
                                 </variation>
+                                <connections>
+                                    <action selector="buttonConvert:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Sk0-rP-IUe"/>
+                                </connections>
                             </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" placeholder="Enter US Shoe Size Here" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="JZI-gz-I5x">
+                                <rect key="frame" x="0.0" y="-30" width="97" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="30" y="84" width="261" height="30"/>
+                                </variation>
+                            </textField>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Converted Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bjc-cx-OyD">
+                                <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="30" y="161" width="171" height="32"/>
+                                </variation>
+                            </label>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Error Message" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fBw-LG-1XQ">
+                                <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="30" y="122" width="232" height="21"/>
+                                </variation>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <variation key="default">
                             <mask key="subviews">
                                 <exclude reference="otH-Ov-1od"/>
                                 <exclude reference="i7E-hs-94T"/>
+                                <exclude reference="JZI-gz-I5x"/>
+                                <exclude reference="bjc-cx-OyD"/>
+                                <exclude reference="fBw-LG-1XQ"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
                             <mask key="subviews">
                                 <include reference="otH-Ov-1od"/>
                                 <include reference="i7E-hs-94T"/>
+                                <include reference="JZI-gz-I5x"/>
+                                <include reference="bjc-cx-OyD"/>
+                                <include reference="fBw-LG-1XQ"/>
                             </mask>
                         </variation>
                     </view>
+                    <connections>
+                        <outlet property="buttonConvert" destination="i7E-hs-94T" id="6Hi-zn-swS"/>
+                        <outlet property="labelConvertedValue" destination="bjc-cx-OyD" id="kVd-hP-jp6"/>
+                        <outlet property="labelErrorMessage" destination="fBw-LG-1XQ" id="fWv-U4-5hh"/>
+                        <outlet property="labelMensShoeSize" destination="otH-Ov-1od" id="rwd-d0-pv2"/>
+                        <outlet property="textFieldUSSize" destination="JZI-gz-I5x" id="Hwn-ZB-iNc"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
