@@ -41,14 +41,12 @@ class ViewController: UIViewController {
             
             labelErrorMessage.text = "Please enter numbers only"
             labelErrorMessage.hidden = false
-
             
 
         } else {
-            var shoeSizeinUK:Double = shoeSizeinUSDouble + sizeConversionFactor
-            labelConvertedValue.text = "\(shoeSizeinUK)"
+            labelConvertedValue.text = "\(shoeSizeinUSDouble - sizeConversionFactor)" + " in UK size"
             labelConvertedValue.hidden = false
-            
+            labelErrorMessage.hidden = true
         }
 
         textFieldUSSize.resignFirstResponder()
